@@ -16,7 +16,7 @@ my_fruit_list = my_fruit_list.set_index ('Fruit')
 streamlit.multiselect ("Pick some fruits:", list(my_fruit_list.index))
 
 #Ponemos la tabla en la pagina
-streamlit.dataframe(my_fruit_list)
+#streamlit.dataframe(my_fruit_list)
 
 
 #Vamos a crear una lista donde se puede poner la fruta que queremos añadir
@@ -25,7 +25,9 @@ fruits_selected = streamlit.multiselect("Pick some fruits:", list (my_fruit_list
 fruits_to_show = my_fruit_list.loc[fruits_selected] 
 
 #Mostramos la tabla en la pagina
-streamlit.dataframe(fruits_to_show)                                                                                          
+streamlit.dataframe(fruits_to_show)  
+
+
                                                                                           
                                                                                           
                                                                                           
