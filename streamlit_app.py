@@ -12,7 +12,7 @@ import pandas
 my_fruit_list = pandas.read_csv ("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 my_fruit_list = my_fruit_list.set_index ('Fruit')
   
- #Vamos a hacer una pick list para que puedan elegir la fruta que quieren elegir
+#Vamos a hacer una pick list para que puedan elegir la fruta que quieren elegir
 streamlit.multiselect ("Pick some fruits:", list(my_fruit_list.index))
 
 #Ponemos la tabla en la pagina
@@ -21,4 +21,21 @@ streamlit.dataframe(my_fruit_list)
 
 #Vamos a crear una lista donde se puede poner la fruta que queremos añadir
 
-streamlit.multiselect("Pick some fruits:", list (my_fruit_list.index), ['Avocado', 'Strawberries`])
+fruits_selected = streamlit.multiselect("Pick some fruits:", list (my_fruit_list.index), ['Avocado', 'Strawberries`])
+fruits_to_show = my_fruit_list.loc[fruits_selected] 
+
+#Mostramos la tabla en la pagina
+streamlit.dataframe(fruits_to_show)                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+
+                                                                                          
+                                                                                          
+                                                                                          
