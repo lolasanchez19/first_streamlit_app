@@ -11,3 +11,10 @@ streamlit.header('🍌🥭 Crea tu propio batido de frutas 🥝🍇')
 import pandas
 my_fruit_list = pandas.read_csv ("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 streamlit.dataframe(my_fruit_list)
+ 
+  
+ #Vamos a hacer una pick list para que puedan elegir la fruta que quieren elegir
+streamlit.multiselect ("Pick some fruits:", list(my_fruit_list.index))
+
+#Ponemos la tabla en la pagina
+streamlit.dataframe(my_fruit_list)
