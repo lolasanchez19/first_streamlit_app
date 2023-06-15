@@ -27,12 +27,19 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 #Mostramos la tabla en la pagina
 streamlit.dataframe(fruits_to_show)  
 
+
+#NUEVA SECCION PARA LA APP
+
+streamlit.header("Fruityvice Fruit Advice!")
+
 import request
 
 fruityvice_response = request.get( "https://fruityvice.com/api/fruit/watermelon")
 streamlit.text(fruityvice_response)
                                                                                           
-                                                                                          
+
+
+
                                                                                           
                                                                                           
                                                                                           
