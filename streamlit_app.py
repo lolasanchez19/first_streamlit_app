@@ -44,6 +44,8 @@ streamlit.text(fruityvice_response)
 # ENSEÑAMOS EL DATAFRAME
 streamlit.dataframe(fruityvice_normalized)
 
+import snowflake.connector
+
 
 
                                                                                           
